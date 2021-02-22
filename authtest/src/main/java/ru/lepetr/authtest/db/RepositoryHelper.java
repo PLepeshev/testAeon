@@ -14,11 +14,13 @@ import java.util.Objects;
 @Service
 public class RepositoryHelper {
     UsersRepository usersRepository;
+    PaymentsRepository paymentsRepository;
     private final Duration TIMEOUT_AUTH_ERR = Duration.ofMillis(2000);
-    private final BigDecimal PAYMENT_AMOUNT = new BigDecimal(1.1d);
+    private final BigDecimal PAYMENT_AMOUNT = new BigDecimal("1.1");
 
-    public RepositoryHelper(UsersRepository usersRepository) {
+    public RepositoryHelper(UsersRepository usersRepository, PaymentsRepository paymentsRepository) {
         this.usersRepository = usersRepository;
+        this.paymentsRepository = paymentsRepository;
     }
 
     @Transactional
@@ -81,6 +83,7 @@ public class RepositoryHelper {
             Response response = new Response();
             response.setBalance(userEntity.getAccSumUsd());
             response.setStatus(Response.Status.PAYMENT_OK);
+            addPayment(userEntity.getLogin(), PAYMENT_AMOUNT);
             return response;
         } else {
             Response response = new Response();
@@ -88,7 +91,17 @@ public class RepositoryHelper {
             response.setStatus(Response.Status.PAYMENT_NOT_ENOUGH);
             return response;
         }
+    }
 
-
+    @Transactional
+    public void addPayment(String login, BigDecimal sum) {
+        if (Objects.isNull(login) || Objects.isNull(usersRepository.findByLogin(login))) {
+            return;
+        }
+        PaymentEntity paymentEntity = new PaymentEntity();
+        paymentEntity.setDatePay(LocalDateTime.now());
+        paymentEntity.setSumPay(sum.round(new MathContext(2)));
+        paymentEntity.setLogin(login);
+        paymentsRepository.save(paymentEntity);
     }
 }

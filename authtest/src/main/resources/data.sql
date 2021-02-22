@@ -10,6 +10,15 @@ CREATE TABLE users (
     CONSTRAINT uc_token UNIQUE (token)
 );
 
+DROP TABLE IF EXISTS payments;
+CREATE TABLE payments (
+    id   IDENTITY NOT NULL PRIMARY KEY,
+    login VARCHAR(50) NOT NULL,
+    date_pay TIMESTAMP,
+    sum_pay DECIMAL(19,4),
+    FOREIGN KEY (login) REFERENCES users(login)
+);
+
 
 INSERT INTO users (id,login, password_enc, acc_sum_usd) VALUES
   (1,'user1', '$2a$10$ucMiWSrykZdXlVJxy6PGHukHrXDrWEljWCs5SGp73KRz5SLdoqIn.', 8),--123456
