@@ -59,7 +59,7 @@ public class AuthService {
             return response;
         }
     }
-
+    
     @GetMapping(value = "/payment", produces = APPLICATION_JSON_VALUE)
     Response doPayment(@RequestParam(name = "token") String token) {
         return repositoryHelper.doPayment(token);
