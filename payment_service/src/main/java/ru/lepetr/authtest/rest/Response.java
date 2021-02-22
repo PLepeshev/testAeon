@@ -12,7 +12,7 @@ public class Response {
     Status status;
     BigDecimal balance;
 
-    public enum Status{
+    public enum Status {
         AUTH_OK,
         AUTH_ERR,
         USER_NOT_FOUND,

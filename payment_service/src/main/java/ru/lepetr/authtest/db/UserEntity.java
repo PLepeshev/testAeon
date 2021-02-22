@@ -28,8 +28,9 @@ public class UserEntity {
 
     public UserEntity() {
     }
+
     public UserEntity(String login, String passwordEnc) {
-        this.login=login;
-        this.passwordEnc=passwordEnc;
+        this.login = login;
+        this.passwordEnc = passwordEnc;
     }
 }

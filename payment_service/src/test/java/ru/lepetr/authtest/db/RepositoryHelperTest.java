@@ -35,7 +35,7 @@ public class RepositoryHelperTest {
             repositoryHelper.addPayment("user1", new BigDecimal("1.1"));
         }
         List<PaymentEntity> paymentEntityList = paymentsRepository.findByLogin("user1");
-        Assertions.assertTrue(paymentEntityList.size()>=5);
+        Assertions.assertTrue(paymentEntityList.size() >= 5);
     }
 
 

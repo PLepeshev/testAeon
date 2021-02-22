@@ -7,7 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class PassHelper {
     PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
     public boolean passMatches(String pass, String storedEncPass) {
-        return passwordEncoder.matches(pass,storedEncPass);
+        return passwordEncoder.matches(pass, storedEncPass);
     }
 }
