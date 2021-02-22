@@ -1,11 +1,11 @@
-package ru.lepetr.authtest.db;
+package ru.lepetr.payment_service.db;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import ru.lepetr.authtest.rest.Response;
+import ru.lepetr.payment_service.rest.Response;
 
 import java.math.BigDecimal;
 import java.util.List;

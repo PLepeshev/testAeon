@@ -1,4 +1,4 @@
-package ru.lepetr.authtest.db;
+package ru.lepetr.payment_service.db;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

@@ -1,9 +1,9 @@
-package ru.lepetr.authtest.db;
+package ru.lepetr.payment_service.db;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.lepetr.authtest.rest.Response;
-import ru.lepetr.authtest.security.TokenHelper;
+import ru.lepetr.payment_service.rest.Response;
+import ru.lepetr.payment_service.security.TokenHelper;
 
 import java.math.BigDecimal;
 import java.math.MathContext;

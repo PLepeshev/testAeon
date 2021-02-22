@@ -1,10 +1,10 @@
-package ru.lepetr.authtest.rest;
+package ru.lepetr.payment_service.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.lepetr.authtest.db.RepositoryHelper;
-import ru.lepetr.authtest.security.PassHelper;
+import ru.lepetr.payment_service.db.RepositoryHelper;
+import ru.lepetr.payment_service.security.PassHelper;
 
 import java.util.Objects;
 

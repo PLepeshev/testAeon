@@ -1,4 +1,4 @@
-package ru.lepetr.authtest.rest;
+package ru.lepetr.payment_service.rest;
 
 import lombok.Getter;
 import lombok.Setter;

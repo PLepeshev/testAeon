@@ -1,4 +1,4 @@
-package ru.lepetr.authtest.security;
+package ru.lepetr.payment_service.security;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;

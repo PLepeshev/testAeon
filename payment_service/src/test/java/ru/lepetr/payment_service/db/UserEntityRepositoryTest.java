@@ -1,4 +1,4 @@
-package ru.lepetr.authtest.db;
+package ru.lepetr.payment_service.db;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
