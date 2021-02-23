@@ -29,8 +29,11 @@ login (вводим логин и пароль, при успехе выдает
 ## 3 endPoint-а
 ### login
 принимает логин и пароль пользователя, возвращает в классе Response токен и статус выполнения метода
+- пример uri http://localhost:8080/login?user=user1&password=123456
 ### logout
 принимает токен пользователя, возвращает в классе Response статус выполнения операции
+- пример uri http://localhost:8080/logout?token=5cb62eda-6e0a-4af2-bcab-daee83033d75
 ### payment 
 принимает токен пользователя, возвращает в классе Response статус операции и текущий баланс на счете
+- пример uri http://localhost:8080/payment?token=5cb62eda-6e0a-4af2-bcab-daee83033d75
 

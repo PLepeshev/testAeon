@@ -36,7 +36,6 @@ public class RepositoryHelper {
         return userEntity.getToken();
     }
 
-
     public boolean deleteToken(String token) {
         UserEntity userEntity = usersRepository.findByToken(token);
         if (Objects.nonNull(userEntity) && Objects.nonNull(userEntity.getToken())) {
@@ -73,7 +72,6 @@ public class RepositoryHelper {
         }
         return false;
     }
-
 
 
     public Response doPayment(String token) {
